@@ -15,7 +15,7 @@
 	<h1 style="color: white">Gastro-Aid</h1>
 
 
-	<form onsubmit="return false">
+	<form onsubmit="return false; returntologin(); ">
 		<div class="container">		
 			<div class="row">
 				<div class="col"></div>
@@ -75,8 +75,12 @@
       // console.log(selectedEvent.id);
       console.log(message);
   })
+	}
+	
+		function returntologin() {
+			window.location.href = "http://www.lcnr.live?info=register_succes/"
+	
 		}
-
 	</script>
 
 
