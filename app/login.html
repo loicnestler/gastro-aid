@@ -32,7 +32,7 @@
 						<label for="exampleInputPassword1">Password</label>
 						<input type="password" class="form-control" id="password" placeholder="Password">
 					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<button onclick="sende()" class="btn btn-primary">Submit</button>
 					<a href="signup.html">Sign Up</a>
 				</div>
 				</div>
@@ -46,16 +46,28 @@
 
 </div>
 
-<script type="JavaScript">
-	
-axios.post('http://www.lcnr.live:3000/user/login', {
-	email: document.getElementById('email').value,
-	password: document.getElementById('password').value
-	
-}).then(res => res.data).then(data => {
-	data._id
-	data.token
-})
+<script>
+	function sende() {
+
+			let axiosConfig = {
+				'Content-Type': 'application/json; charset=UTF-8',
+				"Access-Control-Allow-Origin": "*",
+			}
+			axios({
+				method: 'post',
+				url: 'http://www.lcnr.live:3000/user/login',
+				headers: axiosConfig,
+				data: {
+					email: document.getElementById('email').value,
+					password: document.getElementById('password').value}
+				})
+			.then((res) => {
+				const message = res.data;
+      // bot.sendMessage(msg.chat.id, message)
+      // console.log(selectedEvent.id);
+      console.log(message);
+  })
+		}
 
 </script>
 
