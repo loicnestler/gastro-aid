@@ -1,0 +1,24 @@
+{
+	"name": "gastro-aid",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/loicnestler/gastro-aid.git",
+	"author": "Loic",
+	"license": "MIT",
+	"dependencies": {
+		"debug": "^4.1.1",
+		"dotenv": "^8.1.0",
+		"jsonwebtoken": "^8.5.1",
+		"koa": "^2.8.1",
+		"koa-joi-router": "^6.0.0",
+		"koa-respond": "^2.1.0",
+		"mongoose": "^5.6.11"
+	},
+	"devDependencies": {
+		"nodemon": "^1.19.1"
+	},
+	"scripts": {
+		"dev": "NODE_ENV=development DEBUG=gastro-aid:* nodemon index.js",
+		"start": "NODE_ENV=production node index.js"
+	}
+}
