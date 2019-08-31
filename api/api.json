@@ -1,0 +1,9 @@
+{
+	"apps": [
+		{
+			"name": "gastro-aid-api",
+			"script": "npm",
+			"args": "start"
+		}
+	]
+}
