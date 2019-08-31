@@ -11,8 +11,8 @@
 
 	<title>Gastro-Aid</title>
 </head>
-<body>
-	<h1>Gastro-Aid</h1>
+<body background= 'background.jpg'>
+	<h1 style="color: white">Gastro-Aid</h1>
 
 
 	<form onsubmit="return false">
@@ -22,7 +22,7 @@
 				<div class="col"></div>
 				<div class="card">
 					<div class="card-body">
-						<div class="col">
+						<div class="col" style="width: 500px;">
 							<div class="form-group">
 								<label for="formGroupExampleInput">Name</label>
 								<input type="text" class="form-control" id="name" placeholder="Name">
@@ -54,16 +54,26 @@
 
 <script>
 	function sende() {
-		axios.post('http://www.lcnr.live:3000/user/signup', {
-			name: document.getElementById('name').value,
-	//address: document.getElemenetById('address').value,
-	password: document.getElementById('password').value,
-	email: document.getElementById('email').value
-}).then(res => res.data).then(data => {
-	console.log(data)
-}).catch(err => {
-	console.log(err)
-})
+
+		let axiosConfig = {
+      'Content-Type': 'application/json; charset=UTF-8',
+      "Access-Control-Allow-Origin": "*",
+}
+axios({
+      method: 'post',
+      url: 'http://www.lcnr.live:3000/user/signup',
+      headers: axiosConfig,
+      data: {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+		password: document.getElementById('password').value}
+  })
+  .then((res) => {
+      const message = res.data;
+      // bot.sendMessage(msg.chat.id, message)
+      // console.log(selectedEvent.id);
+      console.log(message);
+  })
 }
 
 
