@@ -15,7 +15,7 @@
 	<h1>Gastro-Aid</h1>
 
 
-	<form>
+	<form onsubmit="return false">
 		<div class="container">
 			
 			<div class="row">
@@ -39,7 +39,7 @@
 								<label for="exampleInputPassword1">Password</label>
 								<input type="password" class="form-control" id="password" placeholder="Password">
 							</div>
-							<button type="submit" class="btn btn-primary">Sign Up</button>
+							<button  onclick="sende()" class="btn btn-primary">Sign Up</button>
 						</div>
 					</div>
 				</div>
@@ -52,17 +52,20 @@
 
 </div>
 
-<script type="JavaScript">
-	
-axios.post('http://116.203.223.205:3000/user/signup', {
-	name: document.getElemenetById('name').value,
-	address: document.getElemenetById('address').value,
-	password: document.getElemenetById('password').value,
-	email: document.getElemenetById('email').value
+<script>
+	function sende() {
+		axios.post('http://www.lcnr.live:3000/user/signup', {
+			name: document.getElementById('name').value,
+	//address: document.getElemenetById('address').value,
+	password: document.getElementById('password').value,
+	email: document.getElementById('email').value
 }).then(res => res.data).then(data => {
-	data._id
-	data.token
+	console.log(data)
+}).catch(err => {
+	console.log(err)
 })
+}
+
 
 </script>
 

@@ -48,9 +48,9 @@
 
 <script type="JavaScript">
 	
-axios.post('http://116.203.223.205:3000/user/login', {
-	email: document.getElemenetById('email').value
-	password: document.getElemenetById('password').value,
+axios.post('http://www.lcnr.live:3000/user/login', {
+	email: document.getElementById('email').value,
+	password: document.getElementById('password').value
 	
 }).then(res => res.data).then(data => {
 	data._id
