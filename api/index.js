@@ -15,7 +15,7 @@ const app = new Koa()
 
 const user = require('./routes/user')
 
-app.use(require('koa-cors')())
+app.use(require('@koa/cors')())
 app.use(require('koa-respond')())
 app.use(require('koa-logger')())
 app.use(require('koa-helmet')())
