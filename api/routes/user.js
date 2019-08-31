@@ -141,4 +141,9 @@ router.route({
 	}
 })
 
+router.get('/', async (ctx) => {
+	const users = await User.find()
+	ctx.ok(users)
+})
+
 module.exports = router
