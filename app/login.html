@@ -7,6 +7,7 @@
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 	<title>Gastro-Aid</title>
 </head>
@@ -24,12 +25,12 @@
 				<div class="col">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Email address</label>
-						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+						<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
 						
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Password</label>
-						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						<input type="password" class="form-control" id="password" placeholder="Password">
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 					<a href="signup.html">Sign Up</a>
@@ -45,6 +46,18 @@
 
 </div>
 
+<script type="JavaScript">
+	
+axios.post('http://116.203.223.205:3000/user/login', {
+	email: document.getElemenetById('email').value
+	password: document.getElemenetById('password').value,
+	
+}).then(res => res.data).then(data => {
+	data._id
+	data.token
+})
+
+</script>
 
 
 <!-- Optional JavaScript -->
