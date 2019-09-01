@@ -8,6 +8,6 @@ The calculation includes factors such as the weather, the current calendar day (
 Since our tool is open source, any gastro business is welcome to use it.
 We are very concerned that our software contributes to the reduction of foodwaste and to stopping the greenhouse effect. 
 
-#### We also invite everyone to join us and to help us to develope our project!
+#### We also invite everyone to join us and to help us to develop our project!
 
 ![](https://github.com/loicnestler/gastro-aid/blob/master/Pfad%2052.png)
