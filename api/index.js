@@ -14,23 +14,18 @@ const generator = new SwaggerAPI()
 const app = new Koa()
 
 const user = require('./routes/user')
+const calculate = require('./routes/calculate')
 
 app.use(require('@koa/cors')())
 app.use(require('koa-respond')())
 app.use(require('koa-logger')())
 app.use(require('koa-helmet')())
 
-// app.use(async (ctx, next) => {
-// 	if (ctx.method === 'OPTIONS') {
-// 		ctx.set('Access-Control-Allow-Origin', '*')
-// 		ctx.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-// 		ctx.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
-// 		ctx.ok()
-// 	}
-// })
-
 app.use(user.middleware())
 generator.addJoiRouter(user)
+
+app.use(calculate.middleware())
+generator.addJoiRouter(calculate)
 
 const spec = generator.generateSpec({
 	info     : {

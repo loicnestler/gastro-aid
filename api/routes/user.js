@@ -53,7 +53,7 @@ router.route({
 			user = await user.save()
 			const token = await auth.generateToken({ _id: user._id })
 			ctx.cookies.set('Authorization', `Bearer ${token}`)
-			console.log(typeof user._id)
+			// console.log(typeof user._id)
 			ctx.ok({ _id: user._id.toString(), token })
 		} catch (err) {
 			debug(err)
