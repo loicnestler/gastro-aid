@@ -10,4 +10,4 @@ We are very concerned that our software contributes to the reduction of foodwast
 
 #### We also invite everyone to join us and to help us to develope our project!
 
-![](https://github.com/loicnestler/gastro-aid/blob/master/Pfad%2052.png =250x250)
+![](https://github.com/loicnestler/gastro-aid/blob/master/Pfad%2052.png)
