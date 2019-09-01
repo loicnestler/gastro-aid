@@ -12,10 +12,12 @@
 	<title>Gastro-Aid</title>
 </head>
 <body background= 'background.jpg'>
-	<h1 style="color: white">Gastro-Aid</h1>
+	<div>
+	<img src="Pfad51.png" width="90px" style="float:left;">
+	<h1 style="color: white;">Gastro-Aid</h1>
+	</div>
 
-
-	<form>
+	<form onsubmit="return false">
 		<div class="container">
 			
 			<div class="row">
@@ -49,25 +51,25 @@
 
 <script>
 	function sende() {
-
-			let axiosConfig = {
-				'Content-Type': 'application/json; charset=UTF-8',
-				"Access-Control-Allow-Origin": "*",
-			}
-			axios({
-				method: 'post',
-				url: 'http://www.lcnr.live:3000/user/login',
-				headers: axiosConfig,
-				data: {
-					email: document.getElementById('email').value,
-					password: document.getElementById('password').value}
-				})
-			.then((res) => {
-				const message = res.data;
+		window.location.replace("http://www.lcnr.live/dashboard.html");
+			// let axiosConfig = {
+			// 	'Content-Type': 'application/json; charset=UTF-8',
+			// 	"Access-Control-Allow-Origin": "*",
+			// }
+			// axios({
+			// 	method: 'post',
+			// 	url: 'http://www.lcnr.live:3000/user/login',
+			// 	headers: axiosConfig,
+			// 	data: {
+			// 		email: document.getElementById('email').value,
+			// 		password: document.getElementById('password').value}
+			// 	})
+			// .then((res) => {
+			// 	const message = res.data;
       // bot.sendMessage(msg.chat.id, message)
       // console.log(selectedEvent.id);
-      console.log(message);
-  })
+      //console.log(message);
+  //})
 		}
 
 </script>

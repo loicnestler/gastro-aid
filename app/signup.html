@@ -12,7 +12,10 @@
 	<title>Gastro-Aid</title>
 </head>
 <body background= 'background.jpg'>
-	<h1 style="color: white">Gastro-Aid</h1>
+	<div>
+	<img src="Pfad51.png" width="90px" style="float:left;">
+	<h1 style="color: white;">Gastro-Aid</h1>
+	</div>
 
 
 	<form onsubmit="return false;">
@@ -55,27 +58,27 @@
 
 	<script>
 		function sende() {
-
-			let axiosConfig = {
-				'Content-Type': 'application/json; charset=UTF-8',
-				"Access-Control-Allow-Origin": "*",
-			}
-			axios({
-				method: 'post',
-				url: 'http://www.lcnr.live:3000/user/signup',
-				headers: axiosConfig,
-				data: {
-					name: document.getElementById('name').value,
-					email: document.getElementById('email').value,
-					password: document.getElementById('password').value}
-				})
-			.then((res) => {
-				const message = res.data;
-      // bot.sendMessage(msg.chat.id, message)
-      // console.log(selectedEvent.id);
-      console.log(message);
-	  window.location.href = "http://www.w3schools.com";
-  })
+			window.location.replace("http://www.lcnr.live/dashboard.html");
+		// 	let axiosConfig = {
+		// 		'Content-Type': 'application/json; charset=UTF-8',
+		// 		"Access-Control-Allow-Origin": "*",
+		// 	}
+		// 	axios({
+		// 		method: 'post',
+		// 		url: 'http://www.lcnr.live:3000/user/signup',
+		// 		headers: axiosConfig,
+		// 		data: {
+		// 			name: document.getElementById('name').value,
+		// 			email: document.getElementById('email').value,
+		// 			password: document.getElementById('password').value}
+		// 		})
+		// 	.then((res) => {
+		// 		const message = res.data;
+  //     // bot.sendMessage(msg.chat.id, message)
+  //     // console.log(selectedEvent.id);
+  //     console.log(message);
+	 //  window.location.href = "http://www.w3schools.com";
+  // })
 	}
 	</script>
 
