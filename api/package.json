@@ -8,7 +8,7 @@
 	"dependencies": {
 		"@google/maps": "^0.5.5",
 		"@koa/cors": "2",
-		"axios": "^0.19.0",
+		"axios": "^0.21.1",
 		"bcrypt": "^3.0.6",
 		"debug": "^4.1.1",
 		"dotenv": "^8.1.0",
